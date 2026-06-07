@@ -1,11 +1,12 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TerreAventure.Domain.IRepository;
 
 var builder = Host.CreateApplicationBuilder(args);
 
 // Configuration de la chaîne de connexion
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-                          ?? "Server=YOUR_SERVER;Database=YOUR_DB;Trusted_Connection=True;TrustServerCertificate=True;";
+                          ?? "Server=localhost;Database=Terr_Aventure;Trusted_Connection=True;";
 
 // Injection des dépendances
 builder.Services.AddHttpClient<ActivityApiService>();

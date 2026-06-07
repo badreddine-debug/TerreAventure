@@ -1,9 +1,12 @@
+using TerreAventure.Domain.Interface;
+using TerreAventure.Domain.IRepository;
+
 public class ActivitySyncService
 {
-    private readonly ActivityApiService _apiService;
+    private readonly IActivityApiService _apiService; // Changé ici
     private readonly IActivityRepository _repository;
 
-    public ActivitySyncService(ActivityApiService apiService, IActivityRepository repository)
+    public ActivitySyncService(IActivityApiService apiService, IActivityRepository repository)
     {
         _apiService = apiService;
         _repository = repository;

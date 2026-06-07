@@ -1,9 +1,9 @@
 using System.Net.Http.Json;
+using TerreAventure.Domain.Interface;
 
-public class ActivityApiService
+public class ActivityApiService : IActivityApiService
 {
     private readonly HttpClient _httpClient;
-
     public ActivityApiService(HttpClient httpClient)
     {
         _httpClient = httpClient;

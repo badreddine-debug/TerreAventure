@@ -28,8 +28,3 @@ public class ActivityDto
     public string Category { get; set; }
 }
 
-// Domain/Interfaces/IActivityRepository.cs
-public interface IActivityRepository
-{
-    Task UpsertActivitiesAsync(IEnumerable<ActivityDto> activities);
-}

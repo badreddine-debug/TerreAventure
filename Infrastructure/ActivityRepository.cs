@@ -1,6 +1,7 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 using Dapper;
+using TerreAventure.Domain.IRepository;
 
 public class ActivityRepository : IActivityRepository
 {
